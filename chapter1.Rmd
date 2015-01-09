@@ -1,0 +1,29 @@
+---
+title: "Arb_Theory"
+author: "Ivan WJ"
+date: "9 January, 2015"
+output: html_document
+---
+$$
+\Gamma(z) = \int_0^\infty t^{z-1}e^{-t}dt\,.
+$$
+
+##The Binomial Model##
+__Definition 2.1__ _The value process of the portfolio h is defined by_  
+
+$V_t = xB_t + yS_t, t = 0,1,$  
+
+_or,_  
+
+$V_0 = x + ys,$  
+$V_1 = x(1 + R) + ysZ.$  
+
+__Definition 2.2__ _An arbitrage portfolio is a portfolio h with the properties_  
+
+$V_0 = 0,$  
+$V_1 > 0,$ _with probability 1._  
+
+__Proposition 2.3__ _The model above is free of arbitrage if and only if the following conditions hold:_  
+
+$d \le (1 + R) \le u.$  
+
