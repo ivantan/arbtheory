@@ -4,8 +4,12 @@ author: "Ivan WJ"
 date: "9 January, 2015"
 output: html_document
 ---
-$$
-\Gamma(z) = \int_0^\infty t^{z-1}e^{-t}dt\,.
+$$ 
+\begin{array}{l}
+xyz
+\\
+xyz
+\end{array}
 $$
 
 ##The Binomial Model##
@@ -14,19 +18,31 @@ __Definition 2.1__ _The value process of the portfolio h is defined by_
 $V_t = xB_t + yS_t, t = 0,1,$  
 
 _or,_  
-
-$V_0 = x + ys,$  
-$V_1 = x(1 + R) + ysZ.$  
+$$\begin{array}{l} V_0 = x + ys, \\
+V_1 = x(1+R) + ysZ.\end{array}$$ 
 
 __Definition 2.2__ _An arbitrage portfolio is a portfolio h with the properties_  
 
-$V_0 = 0,$  
-$V_1 > 0,$ _with probability 1._  
+$$ 
+\begin{array}{l l}
+V_0 = 0,
+\\
+V_1 > 0, & \textit{with probability 1.}
+\end{array}
+$$ 
 
 __Proposition 2.3__ _The model above is free of arbitrage if and only if the following conditions hold:_  
 
-$d \le (1 + R) \le u.$  
+$$d \le (1+R) \le u.$$  
 
 __Definition 2.4__ _A probability measure Q is called a martingale measure if the following condition holds:_  
 
-$S_0 = \frac{\displaystyle 1}{\displaystyle 1+R}E^Q[S_1]$
+$$S_0 = \frac{\displaystyle 1}{\displaystyle 1+R}E^Q[S_1].$$  
+
+__Proposition 2.5__ _The market model is arbitrage free if and only if there exists a martingale measure Q._  
+
+__Proposition 2.6__ _For the binomial model above, the martingale probabilities are given by_  
+
+$$\left \{ \begin{array}{l} q_u = \frac{\displaystyle (1+R)-d}{\displaystyle u - d} \\ q_d = \frac{\displaystyle u - (1+R)}{\displaystyle u - d} \end{array} \right.$$
+
+$\left \{ \begin{array}{l l} q_u = \frac{\displaystyle (1+R)-d}{\displaystyle u - d} \\ q_d = \frac{\displaystyle u - (1+R)}{\displaystyle u - d} \end{array} \right.$

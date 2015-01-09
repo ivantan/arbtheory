@@ -67,21 +67,35 @@ img {
 </div>
 
 
-<p><span class="math">\[
-\Gamma(z) = \int_0^\infty t^{z-1}e^{-t}dt\,.
+<p><span class="math">\[ 
+\begin{array}{l}
+xyz
+\\
+xyz
+\end{array}
 \]</span></p>
 <div id="the-binomial-model" class="section level2">
 <h2>The Binomial Model</h2>
 <p><strong>Definition 2.1</strong> <em>The value process of the portfolio h is defined by</em></p>
 <p><span class="math">\(V_t = xB_t + yS_t, t = 0,1,\)</span></p>
-<p><em>or,</em></p>
-<p><span class="math">\(V_0 = x + ys,\)</span><br /><span class="math">\(V_1 = x(1 + R) + ysZ.\)</span></p>
+<p><em>or,</em><br /><span class="math">\[\begin{array}{l} V_0 = x + ys, \\
+V_1 = x(1+R) + ysZ.\end{array}\]</span></p>
 <p><strong>Definition 2.2</strong> <em>An arbitrage portfolio is a portfolio h with the properties</em></p>
-<p><span class="math">\(V_0 = 0,\)</span><br /><span class="math">\(V_1 &gt; 0,\)</span> <em>with probability 1.</em></p>
+<p><span class="math">\[ 
+\begin{array}{l l}
+V_0 = 0,
+\\
+V_1 &gt; 0, &amp; \textit{with probability 1.}
+\end{array}
+\]</span></p>
 <p><strong>Proposition 2.3</strong> <em>The model above is free of arbitrage if and only if the following conditions hold:</em></p>
-<p><span class="math">\(d \le (1 + R) \le u.\)</span></p>
+<p><span class="math">\[d \le (1+R) \le u.\]</span></p>
 <p><strong>Definition 2.4</strong> <em>A probability measure Q is called a martingale measure if the following condition holds:</em></p>
-<p><span class="math">\(S_0 = \frac{\displaystyle 1}{\displaystyle 1+R}E^Q[S_1]\)</span></p>
+<p><span class="math">\[S_0 = \frac{\displaystyle 1}{\displaystyle 1+R}E^Q[S_1].\]</span></p>
+<p><strong>Proposition 2.5</strong> <em>The market model is arbitrage free if and only if there exists a martingale measure Q.</em></p>
+<p><strong>Proposition 2.6</strong> <em>For the binomial model above, the martingale probabilities are given by</em></p>
+<p><span class="math">\[\left \{ \begin{array}{l} q_u = \frac{\displaystyle (1+R)-d}{\displaystyle u - d} \\ q_d = \frac{\displaystyle u - (1+R)}{\displaystyle u - d} \end{array} \right.\]</span></p>
+<p><span class="math">\(\left \{ \begin{array}{l l} q_u = \frac{\displaystyle (1+R)-d}{\displaystyle u - d} \\ q_d = \frac{\displaystyle u - (1+R)}{\displaystyle u - d} \end{array} \right.\)</span></p>
 </div>
 
 
