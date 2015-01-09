@@ -18,3 +18,5 @@ contents
 10. the martingale approach to arbitrage theory  
 11. the mathematics of the martingale approach  
 12. black-scholes from a martingale point of view  
+
+files in .Rmd can be opened and "knitted" using the free RStudio. once in RStudio, click on the "Knit HTML" button on the source pane's ribbon, then open the HTML in a browser of your choice to see the formatted math equations. or more easily, in the plot/help/viewer pane's ribbon there is also an "open in window" button, click on it and it opens the knitted HTML in your default broswer.
