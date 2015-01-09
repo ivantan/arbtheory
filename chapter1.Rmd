@@ -27,3 +27,6 @@ __Proposition 2.3__ _The model above is free of arbitrage if and only if the fol
 
 $d \le (1 + R) \le u.$  
 
+__Definition 2.4__ _A probability measure Q is called a martingale measure if the following condition holds:_  
+
+$S_0 = \frac{\displaystyle 1}{\displaystyle 1+R}E^Q[S_1]$
