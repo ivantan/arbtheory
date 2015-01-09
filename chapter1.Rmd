@@ -1,9 +1,11 @@
 ---
-title: "Arb_Theory"
-author: "Ivan WJ"
-date: "9 January, 2015"
+title: "Results from Arbitrage Theory in Continuous Time by Tomas Bjork"
+author: ""
+date: ""
 output: html_document
 ---
+
+Templates here:  
 $$ 
 \begin{array}{l}
 xyz
@@ -12,37 +14,116 @@ xyz
 \end{array}
 $$
 
-##The Binomial Model##
+__Definition X.X__ _Statement here_  
+__Proposition X.X__ _Statement here_  
+
+###The Binomial Model###
 __Definition 2.1__ _The value process of the portfolio h is defined by_  
 
-$V_t = xB_t + yS_t, t = 0,1,$  
+$$V^h_t = xB_t + yS_t, \quad t = 0,1 ,$$  
 
 _or,_  
-$$\begin{array}{l} V_0 = x + ys, \\
-V_1 = x(1+R) + ysZ.\end{array}$$ 
+$$\begin{array}{l} V^h_0 = x + ys, \\
+V^h_1 = x\left(1+R\right) + ysZ.\end{array}$$ 
 
 __Definition 2.2__ _An arbitrage portfolio is a portfolio h with the properties_  
 
 $$ 
-\begin{array}{l l}
-V_0 = 0,
+\begin{array}{l}
+V^h_0 = 0,
 \\
-V_1 > 0, & \textit{with probability 1.}
+V^h_1 > 0, \quad \textit{with probability 1.}
 \end{array}
 $$ 
 
 __Proposition 2.3__ _The model above is free of arbitrage if and only if the following conditions hold:_  
 
-$$d \le (1+R) \le u.$$  
+$$d \le \left( 1+R \right) \le u.$$  
 
 __Definition 2.4__ _A probability measure Q is called a martingale measure if the following condition holds:_  
 
-$$S_0 = \frac{\displaystyle 1}{\displaystyle 1+R}E^Q[S_1].$$  
+$$S_0 = \frac{\displaystyle 1}{\displaystyle 1+R}
+E^Q\left[S_1\right].$$  
 
 __Proposition 2.5__ _The market model is arbitrage free if and only if there exists a martingale measure Q._  
 
 __Proposition 2.6__ _For the binomial model above, the martingale probabilities are given by_  
 
-$$\left \{ \begin{array}{l} q_u = \frac{\displaystyle (1+R)-d}{\displaystyle u - d} \\ q_d = \frac{\displaystyle u - (1+R)}{\displaystyle u - d} \end{array} \right.$$
+$$
+\left\{ \begin{array}{l} 
+q_u = \frac{\displaystyle (1+R)-d}{u - d} \\ 
+q_d = \frac{\displaystyle u-(1+R)}{u - d} 
+\end{array} \right.
+$$
 
-$\left \{ \begin{array}{l l} q_u = \frac{\displaystyle (1+R)-d}{\displaystyle u - d} \\ q_d = \frac{\displaystyle u - (1+R)}{\displaystyle u - d} \end{array} \right.$
+__Definition 2.7__ _A contingent claim is any stochastic variable $X$ of the form $X = \Phi\left(Z\right)$, where $Z$ is the stochastic variable driving the stock price process_ 
+
+__Definition 2.8__ _A given contingent claim X is said to be reachable if there exist a portfolio h such that_  
+
+$$
+V^h_1 = X, \quad \textit{with probability 1.}
+$$
+
+The portfolio h is also called a __hedging__ portfolio or a __replicating__ portfolio. If all claims can be replicated we say that the market is __complete__.  
+
+
+__Proposition 2.9__ _Suppose that a claim $X$ is reachable with replicating portfolio h. Then any price at t = 0  of the claim X, other than $V^h_0$ will lead to an arbitrage possibility._  
+
+__Proposition 2.10__ _Assume that the general binomail model is free of arbitrage. Then it is also complete._  
+
+__Proposition 2.11__ _If the binomial model is free of arbitrage, then the arbitrage free price of a contingent claim X is given by_  
+
+$$
+\Pi \left( 0;X \right) = 
+\frac{\displaystyle 1}{\displaystyle 1+R}E^Q[X].
+$$
+
+__Definition 2.13__ _A portfolio strategy is a stochastic process_  
+
+$$\left\{h_t = (x_t, y_t); \quad t = 1,...,T\right\}$$
+
+_such that $h_t$ is a function of $S_0,S_1,...,S_{t-1}$. For a given portfolio strategy h we set $h_0 = h_1$ by convention. The __value__ process corresponding to the portfolio h is defined by_  
+
+$$V^h_t = x_t(1+R) + y_tS_t.$$
+
+__Proposition 2.14__ _A portfolio strategy h is said to be self financing if the following condition holds for all $t = 0,...,T-1$_  
+
+$$x_t(1+R) + y_tS_t = x_{t+1} + y_{t+1}S_t$$
+
+__Proposition 2.15__ _(Multi-period version) An arbitrage possibility is a self-financing porfolio h with the properties_  
+
+$$ 
+\begin{array}{r}
+V^h_0 = 0,
+\\
+P\left(V^h_T \ge 0 \right) = 1,
+\\
+P\left(V^h_T > 0 \right) > 0.
+\end{array}
+$$
+
+__Lemma 2.16__ _If the model is free of arbitrage then the following conditions necessarily must hold._  
+
+$$d \le (1+R) \le u.$$
+
+__Definition 2.17__ _The martingale probabilities $q_u$ and $q_d$ are defined as the probabilities for which the relation_  
+
+$$
+s = \frac{\displaystyle 1}{\displaystyle 1+R}
+E^Q [S_{t+1} \mid S_t = s]
+$$
+
+holds.
+
+__Proposition 2.18__ _The martingale probabilities are given by_  
+
+$$
+\left\{ \begin{array}{l} 
+q_u = \frac{\displaystyle (1+R)-d}{u - d} \\ 
+q_d = \frac{\displaystyle u-(1+R)}{u - d} 
+\end{array} \right.
+$$
+
+__Definition 2.19__ _A contingent claim is a stochastic variable $X$ of the form_  
+
+$$X = \Phi \left( S_T \right)$$
