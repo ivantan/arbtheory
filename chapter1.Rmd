@@ -42,7 +42,7 @@ $$d \le \left( 1+R \right) \le u.$$
 
 __Definition 2.4__ _A probability measure Q is called a martingale measure if the following condition holds:_  
 
-$$S_0 = \frac{\displaystyle 1}{\displaystyle 1+R}
+$$S_0 = \frac{1}{1+R}
 E^Q\left[S_1\right].$$  
 
 __Proposition 2.5__ _The market model is arbitrage free if and only if there exists a martingale measure Q._  
@@ -109,7 +109,7 @@ $$d \le (1+R) \le u.$$
 __Definition 2.17__ _The martingale probabilities $q_u$ and $q_d$ are defined as the probabilities for which the relation_  
 
 $$
-s = \frac{\displaystyle 1}{\displaystyle 1+R}
+s = \frac{1}{\displaystyle 1+R}
 E^Q [S_{t+1} \mid S_t = s]
 $$
 
@@ -119,11 +119,76 @@ __Proposition 2.18__ _The martingale probabilities are given by_
 
 $$
 \left\{ \begin{array}{l} 
-q_u = \frac{\displaystyle (1+R)-d}{u - d} \\ 
-q_d = \frac{\displaystyle u-(1+R)}{u - d} 
+q_u = \frac{(1+R)-d}{u - d} \\ 
+q_d = \frac{u-(1+R)}{u - d} 
 \end{array} \right.
 $$
 
 __Definition 2.19__ _A contingent claim is a stochastic variable $X$ of the form_  
 
 $$X = \Phi \left( S_T \right)$$
+
+__Definition 2.20__ _A given contingent claim X is said to be reachable if there exists a self-financing portfolio h such that_
+
+$$V^h_T = X, \quad \text{with probability 1}.$$
+
+The portfolio h is also called a __hedging__ portfolio or a __replicating__ portfolio. If all claims can be replicated we say that the market is __complete__.  
+
+__Proposition 2.21__ _Suppose that X is reachable using the portfolio h. Suppose furthermore that, at some time t, it is possible to buy X at a price cheaper than (or to sell it at a price higher than $V^h_T$. Then it is possible to make an arbitrage profit._
+
+__Proposition 2.22__ _The muliperiod binomial model is complete, i.e. every claim can be replicated by a self-financing portfolio._
+
+__Proposition 2.24__ _(Binomial algorithm) Consider a T-claim $X = \Phi (S_T)$. Then this claim can be replicated using a self-financing portfolio. If $V_t(k)$ denotes the value of the portfolio at the node (t,k) then $V_t(k)$ can be computed recursively by the scheme_  
+
+$$
+\left\{ \begin{array}{l} 
+V_t(k) = \frac{1}{1+R} 
+\{ q_uV_{t+1}(k+1) + q_dV_{t+1}(k) \}, \\ 
+V_T(k) = \Phi (su^kd^{T-k}). 
+\end{array} \right.
+$$
+
+where the martingale probabilities $q_u$ and $q_d$ are given by
+
+$$
+\left\{ \begin{array}{l} 
+q_u = \frac{(1+R)-d}{u - d}, \\ 
+q_d = \frac{u-(1+R)}{u - d}. 
+\end{array} \right.
+$$
+
+With the notation as above, the hedging portfolio is given by
+
+$$
+\left\{ \begin{array}{l} 
+x_t(k) = \frac{1}{1+R} \cdot 
+\frac{uV_t(k) + dV_t(k+1)}{u - d}, \\ 
+y_t(k) = \frac{1}{S_{t-1}} \cdot 
+\frac{V_t(k+1) - V_t(k)}{u - d}. 
+\end{array} \right.
+$$
+
+In particular, the arbitrage free price of the claim at $t=0$ is given by $V_0(0)$.  
+
+__Proposition 2.25__ _The arbitrage free price at t = 0 of a T-claim X is given by_
+
+$$
+\Pi \left( 0;X \right) = 
+\frac{1}{(1+R)^T} \cdot E^Q[X],
+$$
+
+where Q denotes the martingale measure, or more explicitly
+
+$$
+\Pi \left( 0;X \right) = 
+\frac{1}{(1+R)^T} \cdot 
+\sum^T_{k=0} \binom{T}{k} q^k_u q^{T-k}_d \Phi(su^kd^{T-k})
+$$
+
+__Proposition 2.26__ _The condition_
+
+$$
+d < (1+R) < u
+$$
+
+is a necessary and sufficient condition for absence of arbitrage.

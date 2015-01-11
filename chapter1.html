@@ -89,7 +89,7 @@ V^h_1 &gt; 0, \quad \textit{with probability 1.}
 <p><strong>Proposition 2.3</strong> <em>The model above is free of arbitrage if and only if the following conditions hold:</em></p>
 <p><span class="math">\[d \le \left( 1+R \right) \le u.\]</span></p>
 <p><strong>Definition 2.4</strong> <em>A probability measure Q is called a martingale measure if the following condition holds:</em></p>
-<p><span class="math">\[S_0 = \frac{\displaystyle 1}{\displaystyle 1+R}
+<p><span class="math">\[S_0 = \frac{1}{1+R}
 E^Q\left[S_1\right].\]</span></p>
 <p><strong>Proposition 2.5</strong> <em>The market model is arbitrage free if and only if there exists a martingale measure Q.</em></p>
 <p><strong>Proposition 2.6</strong> <em>For the binomial model above, the martingale probabilities are given by</em></p>
@@ -132,19 +132,65 @@ P\left(V^h_T &gt; 0 \right) &gt; 0.
 <p><span class="math">\[d \le (1+R) \le u.\]</span></p>
 <p><strong>Definition 2.17</strong> <em>The martingale probabilities <span class="math">\(q_u\)</span> and <span class="math">\(q_d\)</span> are defined as the probabilities for which the relation</em></p>
 <p><span class="math">\[
-s = \frac{\displaystyle 1}{\displaystyle 1+R}
+s = \frac{1}{\displaystyle 1+R}
 E^Q [S_{t+1} \mid S_t = s]
 \]</span></p>
 <p>holds.</p>
 <p><strong>Proposition 2.18</strong> <em>The martingale probabilities are given by</em></p>
 <p><span class="math">\[
 \left\{ \begin{array}{l} 
-q_u = \frac{\displaystyle (1+R)-d}{u - d} \\ 
-q_d = \frac{\displaystyle u-(1+R)}{u - d} 
+q_u = \frac{(1+R)-d}{u - d} \\ 
+q_d = \frac{u-(1+R)}{u - d} 
 \end{array} \right.
 \]</span></p>
-<p><strong>Definition 2.19</strong> <em>A contingent claim is a stochastic variable X of the form</em></p>
+<p><strong>Definition 2.19</strong> <em>A contingent claim is a stochastic variable <span class="math">\(X\)</span> of the form</em></p>
 <p><span class="math">\[X = \Phi \left( S_T \right)\]</span></p>
+<p><strong>Definition 2.20</strong> <em>A given contingent claim X is said to be reachable if there exists a self-financing portfolio h such that</em></p>
+<p><span class="math">\[V^h_T = X, \quad \text{with probability 1}.\]</span></p>
+<p>The portfolio h is also called a <strong>hedging</strong> portfolio or a <strong>replicating</strong> portfolio. If all claims can be replicated we say that the market is <strong>complete</strong>.</p>
+<p><strong>Proposition 2.21</strong> <em>Suppose that X is reachable using the portfolio h. Suppose furthermore that, at some time t, it is possible to buy X at a price cheaper than (or to sell it at a price higher than <span class="math">\(V^h_T\)</span>. Then it is possible to make an arbitrage profit.</em></p>
+<p><strong>Proposition 2.22</strong> <em>The muliperiod binomial model is complete, i.e. every claim can be replicated by a self-financing portfolio.</em></p>
+<p><strong>Proposition 2.24</strong> <em>(Binomial algorithm) Consider a T-claim <span class="math">\(X = \Phi (S_T)\)</span>. Then this claim can be replicated using a self-financing portfolio. If <span class="math">\(V_t(k)\)</span> denotes the value of the portfolio at the node (t,k) then <span class="math">\(V_t(k)\)</span> can be computed recursively by the scheme</em></p>
+<p><span class="math">\[
+\left\{ \begin{array}{l} 
+V_t(k) = \frac{1}{1+R} 
+\{ q_uV_{t+1}(k+1) + q_dV_{t+1}(k) \}, \\ 
+V_T(k) = \Phi (su^kd^{T-k}). 
+\end{array} \right.
+\]</span></p>
+<p>where the martingale probabilities <span class="math">\(q_u\)</span> and <span class="math">\(q_d\)</span> are given by</p>
+<p><span class="math">\[
+\left\{ \begin{array}{l} 
+q_u = \frac{(1+R)-d}{u - d}, \\ 
+q_d = \frac{u-(1+R)}{u - d}. 
+\end{array} \right.
+\]</span></p>
+<p>With the notation as above, the hedging portfolio is given by</p>
+<p><span class="math">\[
+\left\{ \begin{array}{l} 
+x_t(k) = \frac{1}{1+R} \cdot 
+\frac{uV_t(k) + dV_t(k+1)}{u - d}, \\ 
+y_t(k) = \frac{1}{S_{t-1}} \cdot 
+\frac{V_t(k+1) - V_t(k)}{u - d}. 
+\end{array} \right.
+\]</span></p>
+<p>In particular, the arbitrage free price of the claim at <span class="math">\(t=0\)</span> is given by <span class="math">\(V_0(0)\)</span>.</p>
+<p><strong>Proposition 2.25</strong> <em>The arbitrage free price at t = 0 of a T-claim X is given by</em></p>
+<p><span class="math">\[
+\Pi \left( 0;X \right) = 
+\frac{1}{(1+R)^T} \cdot E^Q[X],
+\]</span></p>
+<p>where Q denotes the martingale measure, or more explicitly</p>
+<p><span class="math">\[
+\Pi \left( 0;X \right) = 
+\frac{1}{(1+R)^T} \cdot 
+\sum^T_{k=0} \binom{T}{k} q^k_u q^{T-k}_d \Phi(su^kd^{T-k})
+\]</span></p>
+<p><strong>Proposition 2.26</strong> <em>The condition</em></p>
+<p><span class="math">\[
+d &lt; (1+R) &lt; u
+\]</span></p>
+<p>is a necessary and sufficient condition for absence of arbitrage.</p>
 </div>
 
 
