@@ -1,0 +1,67 @@
+---
+title: "Results from Arbitrage Theory in Continuous Time by Tomas Bjork"
+author: ""
+date: ""
+output: html_document
+---
+
+Templates here:  
+$$ 
+\begin{array}{l}
+xyz
+\\
+xyz
+\end{array}
+$$
+
+__Definition X.X__ _Statement here_  
+__Proposition X.X__ _Statement here_  
+
+###A More General One Period Model###
+__Assumption 3.1.1__ _We assume that asset price process $S^1$ is strictly positive or, more precisely,_  
+
+$$
+\begin{array}{r l} 
+S^1_0 > 0, \\
+S^1_1(w_j) > 0, & J = 1, \dots , M.
+\end{array}
+$$  
+
+__Definition 3.1__ _The portfolio h is an arbitrage portfolio if it satisfies the conditions_  
+
+$$
+\begin{array}{r} 
+V^h_0 = 0, \\
+P\left(V^h_1 \ge 0\right) = 1, \\
+P\left(V^h_1 > 0\right) > 0.
+\end{array}
+$$
+
+_In more detail_  
+
+$$
+\begin{array}{r l} 
+V^h_0 < 0, \\
+V^h_1(w_i) \ge 0, & \textit{for all $i=1,\dots, M$}, \\
+V^h_1(w_i) > 0, & \textit{for some $i=1,\dots, M$}.
+\end{array}
+$$  
+
+__Lemma 3.2__ _Suppose that $d_0,d_1,\dots,d_K$ are column vectors in $R^N$. Then exactly one of the two following problems possesses a solution._
+
+__Problem 1:__ _Find nonnegative numbers $\lambda_0,\dots,\lambda_K$ such that_  
+
+$$
+d_0 = \sum^K_{j=1} \lambda_jd_j.
+$$
+
+__Problem 2:__ _Find a row vector $h \in R^N$ such that_  
+
+$$
+\begin{array}{r l}
+hd_0 < 0, \\
+hd_j \ge 0, & j=1,\dots,M.
+\end{array}
+$$
+
+
