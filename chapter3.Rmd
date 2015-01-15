@@ -64,4 +64,40 @@ hd_j \ge 0, & j=1,\dots,M.
 \end{array}
 $$
 
+__Proposition 3.4__ _The market is arbitrage free if and only if there exists strictly positive real numbers $q_1, ... , q_M$ with_ 
 
+$$
+q_1 + \dots + q_j = 1,
+$$
+
+such that the following vector equality holds
+
+$$
+Z_0 = \sum^M_{j=1} Z_1(w_j)q_j
+$$
+
+or in component form
+
+$$
+Z^i_0 = sum^M_{j=1} Z^i_1(w_j)q_j, \quad i = 1, \dots, N.
+$$
+
+__Definition 3.5__ _Given the objective probability measure P above, we say that another probability measure Q defined on the same $\omega$ is equivalent to P if_  
+
+$$
+P(A) = 0 <=> Q(A) = 0,
+$$
+
+or equivalently  
+
+$$
+P(A) = 1 <=> Q(A) = 1.
+$$
+
+__Definition 3.6__ _A discrete time random process $X_n$ is a martingale if_  
+
+$$
+E[X_m|F_n] = X_n, \quad \textit{for all n $\le$ m},
+$$
+
+where $F_n$ denotes the information available at time n.
