@@ -85,13 +85,13 @@ $$
 __Definition 3.5__ _Given the objective probability measure P above, we say that another probability measure Q defined on the same $\omega$ is equivalent to P if_  
 
 $$
-P(A) = 0 <=> Q(A) = 0,
+P(A) = 0 \Longleftrightarrow Q(A) = 0,
 $$
 
 or equivalently  
 
 $$
-P(A) = 1 <=> Q(A) = 1.
+P(A) = 1 \Longleftrightarrow Q(A) = 1.
 $$
 
 __Definition 3.6__ _A discrete time random process $X_n$ is a martingale if_  
