@@ -135,3 +135,20 @@ $$
 $$
 
 where Q is a martingale measure for the underlying market.
+
+__Definition 3.12__ _Consider a contingent claim X. If there exists a portfolio h, based on the underlying assets, such that_
+
+$$
+V^h_1 = X, \quad with probability 1.
+$$
+
+that is,  
+
+$$
+V^h_1(w_j) = X(w_j), \quad \textit{j = 1, \dots ,M},
+$$
+
+then we say that X is replicated, or hedged by h.
+
+__Proposition 3.13__ _The market is complete if and only if the rows of the matrix D span $R^M$, i.e. if and only if D has rank M._
+
