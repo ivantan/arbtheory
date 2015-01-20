@@ -123,17 +123,41 @@ Z^i_0 = sum^M_{j=1} Z^i_1(w_j)q_j, \quad i = 1, \dots, N.
 \]</span></p>
 <p><strong>Definition 3.5</strong> <em>Given the objective probability measure P above, we say that another probability measure Q defined on the same <span class="math">\(\omega\)</span> is equivalent to P if</em></p>
 <p><span class="math">\[
-P(A) = 0 &lt;=&gt; Q(A) = 0,
+P(A) = 0 \Longleftrightarrow Q(A) = 0,
 \]</span></p>
 <p>or equivalently</p>
 <p><span class="math">\[
-P(A) = 1 &lt;=&gt; Q(A) = 1.
+P(A) = 1 \Longleftrightarrow Q(A) = 1.
 \]</span></p>
 <p><strong>Definition 3.6</strong> <em>A discrete time random process <span class="math">\(X_n\)</span> is a martingale if</em></p>
 <p><span class="math">\[
 E[X_m|F_n] = X_n, \quad \textit{for all n $\le$ m},
 \]</span></p>
 <p>where <span class="math">\(F_n\)</span> denotes the information available at time n.</p>
+<p><strong>Definition 3.7</strong> <em>Consider the market model above, and fix the asset <span class="math">\(S^1\)</span> as the numeraire asset. We say that a probability measure <span class="math">\(Q\)</span> defined on <span class="math">\(\Omega\)</span> is a martingale measure if it satisfies the following conditions.</em></p>
+<ol style="list-style-type: decimal">
+<li>Q is equivalent to P, i.e.</li>
+</ol>
+<p><span class="math">\[
+Q ~ P
+\]</span></p>
+<ol start="2" style="list-style-type: decimal">
+<li>For every i = 1,…,N, the normalized asset price process</li>
+</ol>
+<p><span class="math">\[
+Z^i_t = \frac{S^i_t}{S^1_t},
+\]</span></p>
+<p>is a martingale under the measure Q.</p>
+<p><strong>Theorem 3.8</strong> <em>(First Fundamental Theorem) Given a fixed numeraire, the market is free of arbitrage possibilities if and only if there exists a martingale measure Q.</em></p>
+<p><strong>Theorem 3.9</strong> <em>(First Fundamental Theorem) Assume that there exists a risk free asset, and denote the corresponding risk free interest rate by R. Then the market is arbitrage free if and only if there exists a measure Q ~ P such that</em></p>
+<p><span class="math">\[
+S^i_0 = \frac{1}{1+R}E^Q[S^i_1], \quad \textit{for all i = 1,$\dots$,N.}
+\]</span></p>
+<p><strong>Definition 3.10</strong> <em>A contingent claim is any random variable X, defined on <span class="math">\(\Omega\)</span>.</em></p>
+<p><strong>Proposition 3.11</strong> <em>consider a given claim X. In order to avoid arbitrage, X must then be priced according to the formula</em></p>
+<p><span class="math">\[
+\Pi
+\]</span></p>
 </div>
 
 

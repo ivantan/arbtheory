@@ -101,3 +101,37 @@ E[X_m|F_n] = X_n, \quad \textit{for all n $\le$ m},
 $$
 
 where $F_n$ denotes the information available at time n.
+
+__Definition 3.7__ _Consider the market model above, and fix the asset $S^1$ as the numeraire asset. We say that a probability measure $Q$ defined on $\Omega$ is a martingale measure if it satisfies the following conditions._
+
+1. Q is equivalent to P, i.e.  
+
+$$
+Q ~ P
+$$
+
+2. For every i = 1,...,N, the normalized asset price process  
+
+$$
+Z^i_t = \frac{S^i_t}{S^1_t},
+$$
+
+is a martingale under the measure Q.
+
+__Theorem 3.8__ _(First Fundamental Theorem) Given a fixed numeraire, the market is free of arbitrage possibilities if and only if there exists a martingale measure Q._
+
+__Theorem 3.9__ _(First Fundamental Theorem) Assume that there exists a risk free asset, and denote the corresponding risk free interest rate by R. Then the market is arbitrage free if and only if there exists a measure Q ~ P such that_  
+
+$$
+S^i_0 = \frac{1}{1+R}E^Q[S^i_1], \quad \textit{for all i = 1,$\dots$,N.}
+$$
+
+__Definition 3.10__ _A contingent claim is any random variable X, defined on $\Omega$._
+
+__Proposition 3.11__ _consider a given claim X. In order to avoid arbitrage, X must then be priced according to the formula_
+
+$$ 
+\Pi(0;X) = \frac{1}{1+R}E^Q[X],
+$$
+
+where Q is a martingale measure for the underlying market.
