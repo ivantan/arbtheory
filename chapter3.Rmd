@@ -145,10 +145,56 @@ $$
 that is,  
 
 $$
-V^h_1(w_j) = X(w_j), \quad \textit{j = 1, \dots ,M},
+V^h_1(w_j) = X(w_j), \quad \textit{j = 1, $\dots$ ,M},
 $$
 
 then we say that X is replicated, or hedged by h.
 
 __Proposition 3.13__ _The market is complete if and only if the rows of the matrix D span $R^M$, i.e. if and only if D has rank M._
 
+__Proposition 3.14__ _(Second Fundamental Theorem) Assume that the model is arbitrage free. Then the market is complete if and only if the martingale measure is unique_  
+
+Summary
+
+__Proposition 3.15__ _Using the risk free asset as the numeraire, the following hold._
+
+* The market is arbitrage free if and only if there exists a martingle measure Q.  
+* The market is complete if and onl if the martingale measure is unique.  
+* For any claim X, the only prices which are consistent with absence of arbitrage are of the form  
+
+$$
+\Pi(0;X) = \frac{1}{1+R}E^Q[X],
+$$
+
+where Q is a martingale measure for the underlying market  
+
+* If the market is complete, then different choices of martingale measure Q in the formula above will generically give rise to different prices.  
+
+* If X is replicable then, even in an incomplete market, the price in the formula will not depend upon the particular choice of martingale measure Q. If X is replicable, then  
+
+$$
+V^h_0 = \frac{1}{1+R}E^Q[X],
+$$  
+for all martingale measures Q and for all replicating portfolios h.
+
+Discount factors
+
+__Definition 3.16__ _The random variable L on $\Omega$ is defined by_
+
+$$
+L(w_i)= \frac{q_i}{p_i}, \quad \textit{i = 1,$\dots$,M.}
+$$
+
+__Definition 3.17__ _Assume absence of arbitrage, and fix a martingale measure Q. With notations as above, the stochastic discount factor (or "state price deflator") is the random variable A on $\Omega$ defined by_
+
+$$
+A(w) = \frac{1}{1+R}L(w).
+$$  
+
+__Proposition 3.18__ _The arbitrage free price of any claim X is given by the formula_
+
+$$
+\Pi(0;X) = E^P[AX]
+$$
+
+where A is a stochastic discount factor.
