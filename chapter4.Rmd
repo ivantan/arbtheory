@@ -37,4 +37,27 @@ or say that "A is $F^X_t$ -measureable"
 
 __Definition 4.3__   
 
-_We say that the process g belongs to the class $L^2[a,b]$ if the following conditions are satisfied._
+1. We say that the process g belongs to the class $L^2[a,b]$ if the following conditions are satisfied.  
+
+* $\integral^b_a E[g^2(s)] ds < \infinity$.  
+* The process g is adapted to the $F^W_t$-filtration.
+
+2. We say that the process g belongs to the class $L^2$ if $g \in L^2[0,t]$ for all t > 0.
+
+__Proposition 4.4__ _Let g be a process satisfying the conditions_  
+
+$$
+\begin{array}{c}
+\integral^b_a E[g^2(s)]ds < \infinity, \\
+\textit{g is adapted to the $F^W_t$-filtration}
+\end{array}
+$$  
+
+Then the following relations hold
+
+$$
+\begin{array}{c}
+ \\
+ \\
+\end{array}
+$$
