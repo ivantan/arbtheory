@@ -92,7 +92,7 @@ A \in F^X_t,
 <li>We say that the process g belongs to the class <span class="math">\(L^2[a,b]\)</span> if the following conditions are satisfied.</li>
 </ol>
 <ul>
-<li><span class="math">\(\integral^b_a E[g^2(s)] ds &lt; \infinity\)</span>.<br /></li>
+<li><span class="math">\(\int^b_a E[g^2(s)] ds &lt; \infty\)</span>.<br /></li>
 <li>The process g is adapted to the <span class="math">\(F^W_t\)</span>-filtration.</li>
 </ul>
 <ol start="2" style="list-style-type: decimal">
@@ -101,17 +101,43 @@ A \in F^X_t,
 <p><strong>Proposition 4.4</strong> <em>Let g be a process satisfying the conditions</em></p>
 <p><span class="math">\[
 \begin{array}{c}
-\integral^b_a E[g^2(s)]ds &lt; \infinity, \\
+\int^b_a E[g^2(s)]ds &lt; \infty, \\
 \textit{g is adapted to the $F^W_t$-filtration}
 \end{array}
 \]</span></p>
 <p>Then the following relations hold</p>
 <p><span class="math">\[
 \begin{array}{c}
- \\
- \\
+E[\int^b_a g(s)dW(s)] = 0. \\
+E[(\int^b_a g(s)dW(s))^2] = \inf^b_a E[g^2(s)]ds. \\
+\inf^b_a g(s) dW(s) \textit{is $F^W_b$-measurable.}
 \end{array}
 \]</span></p>
+<p>Martingales</p>
+<p><strong>Proposition 4.5</strong></p>
+<ul>
+<li>If Y and Z are stochastic variables, and Z is F_t-measurable, then<br /><span class="math">\[
+E[Z \cdot Y|F_t] = Z \cdot E[Y|F_t].
+\]</span></li>
+<li>If Y is a stochastic variable, and if s &lt; t, then<br /><span class="math">\[
+E[E[Y|F_t]|F_s] = E[Y|F_s]
+\]</span></li>
+</ul>
+<p><strong>Definition 4.6</strong> <em>A stochastic process X is called an <span class="math">\((F_t)\)</span>-martingale if the following conditions hold.</em></p>
+<ul>
+<li>X is adapted to the filtration <span class="math">\(\{F_t\}_{t\ge0}\)</span>.<br /></li>
+<li>For all t <span class="math">\[
+E[|X(t)|] &lt; \infty.
+\]</span><br /></li>
+<li>For all s and t with s <span class="math">\(\le\)</span> t the following relation holds <span class="math">\[
+E[X(t)|F_s] = X(s)
+\]</span></li>
+</ul>
+<p>A process satisfying, for all s and t with s <span class="math">\(\le\)</span> t, the inequality <span class="math">\[
+E[X(t)|F_s] \le X(s)
+\]</span> is called a supermartingale, and a process satisfying <span class="math">\[
+E[X(t)|F_s] \ge X(s)
+\]</span> is called a submartingale.</p>
 </div>
 
 

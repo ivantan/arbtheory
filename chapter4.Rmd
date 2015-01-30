@@ -75,3 +75,25 @@ $$
 $$
 E[E[Y|F_t]|F_s] = E[Y|F_s]
 $$
+
+__Definition 4.6__ _A stochastic process X is called an $(F_t)$-martingale if the following conditions hold._
+
+* X is adapted to the filtration $\{F_t\}_{t\ge0}$.  
+* For all t
+$$
+E[|X(t)|] < \infty.
+$$  
+* For all s and t with s $\le$ t the following relation holds
+$$
+E[X(t)|F_s] = X(s)
+$$  
+
+A process satisfying, for all s and t with s $\le$ t, the inequality
+$$
+E[X(t)|F_s] \le X(s)
+$$
+is called a supermartingale, and a process satisfying
+$$
+E[X(t)|F_s] \ge X(s)
+$$
+is called a submartingale.
